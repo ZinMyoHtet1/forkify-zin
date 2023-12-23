@@ -1,5 +1,5 @@
-import '../../src/../node_modules/core.js';
-import '../../src/../node_modules/regenerator-runtime/runtime.js';
+import 'core.js';
+import 'regenerator-runtime/runtime';
 import * as model from './model.js';
 import { API, KEY } from './config.js';
 
