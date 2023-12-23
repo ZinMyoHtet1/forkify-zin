@@ -18,7 +18,6 @@ class AddRecipeView extends View {
   toggleWindow() {
     this._overlay.classList.toggle('hidden');
     this._container.classList.toggle('overlay_active');
-    // return;
   }
 
   _addHandlerOpenWindow() {
@@ -26,7 +25,6 @@ class AddRecipeView extends View {
   }
 
   _addHandlerCloseWindow() {
-    // this._overlay.addEventListener('click', this.toggleWindow.bind(this));
     this._closeBtn.addEventListener('click', this.toggleWindow.bind(this));
   }
 

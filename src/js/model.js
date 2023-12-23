@@ -30,11 +30,9 @@ const createRecipeObject = function (data) {
 };
 
 export const loadRecipe = async function (url) {
-  // console.log(response, data);
   try {
     const data = await AJAX(url);
     if (data.ok) throw new Error();
-    // console.log('data', data);
     state.recipe = createRecipeObject(data);
     if (state.bookmarks.some(bookmark => bookmark.id === data.data.recipe.id))
       state.recipe.isBookmarked = true;
@@ -50,7 +48,6 @@ export const loadSearchResults = async function (query) {
     const data = await AJAX(`${API}?search=${query}&key=${KEY}`);
     if (data.data.recipes.length === 0) throw new Error();
     state.search.results = data.data.recipes.map(rec => {
-      // console.log(rec.recipe_id);
       return {
         id: rec.id,
         title: rec.title,
@@ -111,7 +108,7 @@ export const uploadRecipe = async function (newRecipe) {
         const [quantity, unit, description] = ingArr;
         return { quantity: quantity ? +quantity : null, unit, description };
       });
-    // console.log(ingredients);
+
     const recipe = {
       title: data.title,
       source_url: data.sourceUrl,
@@ -121,22 +118,19 @@ export const uploadRecipe = async function (newRecipe) {
       servings: +data.servings,
       ingredients,
     };
-    // console.log(recipe);
+
     const res = await AJAX(`${API}?key=${KEY}`, recipe);
 
     state.recipe = createRecipeObject(res);
     addBookmark(state.recipe);
     console.log(state.recipe);
   } catch (err) {
-    // addRecipeView.renderError(err);
     throw err;
   }
 };
 
 export const init = function () {
   const storage = localStorage.getItem('bookmarks');
-  // if (!storage) return;
   if (storage) state.bookmarks = JSON.parse(storage);
 };
 init();
-console.log(state.recipe);

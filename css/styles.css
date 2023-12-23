@@ -37,18 +37,15 @@ body {
   background: linear-gradient(-45deg, var(--color_6), 50%, var(--color_7));
   display: grid;
   place-content: center;
-  /* height: 100vh; */
   grid-template-columns: 100px minmax(800px, 1fr) 100px;
   grid-template-rows: 50px 1fr 50px;
   font-family: var(--font_Poppins);
   position: relative;
-  /* height: 200vh; */
 }
 
 .button_effect {
   cursor: pointer;
   transition: all 0.2s ease-in;
-  /* cursor: ; */
 }
 
 .button_effect:hover {
@@ -57,23 +54,18 @@ body {
 
 .container {
   background: var(--color_10);
-  /* min-height: 200vh; */
   width: 100%;
   grid-area: 2/2/3/3;
   border-radius: 5px;
   box-shadow: 4px 4px 10px var(--color_6);
   filter: blur(0);
-  /* z-index: 100; */
-  /* height: 200vh; */
 }
 
 .container.overlay_active {
   filter: blur(0.4rem);
-  /* height: 100vh; */
 }
 
 .container .navbar {
-  /* background: #fff; */
   display: grid;
   grid-template-columns: minmax(100px, 250px) 1fr minmax(200px, 300px);
   padding: 25px;
@@ -119,12 +111,9 @@ body {
 .navbar .searchbar button svg {
   fill: var(--color_12);
   margin-right: 10px;
-  /* font-size: 2rem; */
-  /* height: 50px; */
 }
 .navbar .button {
   position: relative;
-  /* background: blue; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -139,7 +128,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* outline: none; */
   border: none;
   background: inherit;
   color: var(--color_7);
@@ -165,7 +153,6 @@ body {
   display: none;
   transition: all 0.5s ease-in;
   opacity: 0.5;
-  /* margin-top: 0; */
 }
 
 .navbar .button .bookmark_list:hover ~ .bookmarks_container,
@@ -173,8 +160,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* justify-content: flex-start; */
-  /* height: 100%; */
   opacity: 1;
 }
 
@@ -193,24 +178,14 @@ body {
 }
 .searchbar .hover_effect:hover {
   transform: translateX(-40px) scale(1.02);
-  /* cursor: pointer; */
 }
 
 footer a:hover {
   transform: scale(1.02);
 }
 
-/* body button:hover,
-body .button:hover {
-  cursor: pointer;
-  transform: scale(1.02rem);
-  opacity: 0.5;
-} */
-
 .container .main {
-  /* background: green; */
   width: 100%;
-
   min-height: 150vh;
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -228,9 +203,7 @@ aside {
 .recipe_list ul,
 aside ul {
   width: 100%;
-  /* background: cyan; */
   height: 100%;
-  /* margin-bottom: 20px; */
 }
 aside ul {
   margin-top: 20px;
@@ -242,7 +215,6 @@ aside ul {
 
 .container .main aside .pagination {
   width: 100%;
-  /* background: red; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -267,7 +239,6 @@ aside ul {
 
 .recipe_list ul li {
   width: 100%;
-  /* background: red; */
   padding: 15px 10px;
   transition: all 0.2s ease;
   list-style: none;
@@ -285,7 +256,6 @@ aside ul {
   justify-content: flex-start;
   align-items: center;
   text-decoration: none;
-  /* outline: none; */
 }
 
 .recipe_list ul li a .user {
@@ -322,30 +292,20 @@ body .overlay {
   top: 0;
   left: 0;
   right: 0;
-  /* bottom: 0; */
-  /* width: 100%; */
   height: 100vh;
-  /* background: green; */
   display: flex;
   justify-content: center;
   align-items: center;
   color: gray;
-  /* background: rgba(0, 0, 0, 0.2); */
-  /* z-index: 0; */
-  /* filter: blur(0.4rem); */
 }
 
 .overlay .window {
-  /* position: absolute; */
   width: 60%;
   background: #fff;
   min-height: 200px;
   border-radius: 5px;
-  /* box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1); */
   position: relative;
   padding: 30px;
-  /* filter: blur(0); */
-  /* z-index: 100; */
 }
 
 .overlay .window span {
@@ -354,7 +314,6 @@ body .overlay {
   top: 0;
   padding: 10px;
   display: block;
-  /* z-index: 100; */
 }
 
 .overlay.hidden {
@@ -398,11 +357,6 @@ body .overlay {
   color: #fff;
   margin-top: 10px;
 }
-/* .main .recipe {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-} */
 
 .main .spinner {
   width: 100%;
@@ -441,15 +395,8 @@ body .overlay {
 }
 
 .main .recipe #recipe_header .recipe_cover {
-  /* background: green; */
   width: 100%;
   height: 320px;
-  /* background: rgba(0, 0, 0, 0.1); */
-  /* background-image: linear-gradient(
-      rgba(157, 78, 221, 0.4),
-      rgba(199, 125, 255, 0.4)
-    ),
-    url('../src/images/pizza_cover.jpg'); */
   background-size: cover;
 }
 
@@ -468,8 +415,6 @@ body .overlay {
   font-size: 2.3rem;
   text-align: center;
   font-weight: 500;
-  /* padding: 20px; */
-  /* margin-top: 10px; */
 }
 
 .recipe #recipe_header .recipe_name span {
@@ -479,10 +424,8 @@ body .overlay {
 }
 
 .recipe #serving {
-  /* background: lightgray; */
   padding: 90px 0 50px;
   display: flex;
-  /* justify-content: center; */
   align-items: center;
   font-size: 1.3rem;
   font-weight: 400;
@@ -496,8 +439,6 @@ body .overlay {
 
 .recipe #serving .serving_time {
   width: 30%;
-  /* background: green; */
-  /* text-align: center; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -505,7 +446,6 @@ body .overlay {
 
 .recipe #serving .serving_number {
   width: 30%;
-  /* background: red; */
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -518,12 +458,10 @@ body .overlay {
 }
 
 .recipe #serving .bookmark_user {
-  /* background: cyan; */
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   width: 40%;
-  /* font-size: 3rem; */
 }
 
 .recipe #serving .bookmark_user div {

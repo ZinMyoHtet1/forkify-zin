@@ -1,14 +1,10 @@
 export default class View {
   _data;
   render(recipe, rendering = true) {
-    // const markup=this.#generateRecipe(recipe);
     if (!recipe || (Array.isArray(recipe) && recipe.length === 0)) return;
-    // if (!recipe) return;
     this._data = recipe;
-    console.log('running3');
     const markup = this._generateRecipe();
     if (!rendering) return markup;
-    // console.log('running');
     this._clear();
     this._parentEl.insertAdjacentHTML('afterbegin', markup);
   }
@@ -17,9 +13,7 @@ export default class View {
     this._data = data;
     const newMarkup = this._generateRecipe();
     const newDom = document.createRange().createContextualFragment(newMarkup);
-    // console.log(newDom);
     const newElements = Array.from(newDom.querySelectorAll('*'));
-    // console.log(Array.from(newElements));
     const curElements = Array.from(this._parentEl.querySelectorAll('*'));
     newElements.forEach((newEl, i) => {
       const curEl = curElements[i];
