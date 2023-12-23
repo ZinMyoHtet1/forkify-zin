@@ -5,7 +5,7 @@
   "default": "index.html",
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.html"
+    "build": "parcel build index.html --dist-dir ./dist"
   },
   "author": "zin",
   "license": "ISC",
@@ -16,6 +16,6 @@
     "underscore": "^1.13.6"
   },
   "devDependencies": {
-    "parcel": "^1.12.4"
+    "parcel": "^2.10.3"
   }
 }
