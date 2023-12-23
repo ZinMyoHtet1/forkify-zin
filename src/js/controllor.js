@@ -124,11 +124,9 @@ const init = function () {
 
 init();
 
-module.export = {
-  plugins: [
-    {
-      name: 'preset-default',
-    },
-    'cleanupIDs',
-  ],
-};
+plugins: [
+  {
+    name: 'preset-default',
+  },
+  'cleanupIDs',
+];
