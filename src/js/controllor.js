@@ -122,3 +122,12 @@ const init = function () {
 };
 
 init();
+
+module.export = {
+  plugins: [
+    {
+      name: 'preset-default',
+    },
+    'cleanupIDs',
+  ],
+};
