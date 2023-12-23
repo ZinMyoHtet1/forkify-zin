@@ -2,7 +2,7 @@ import '../../src/../node_modules/core.js';
 import '../../src/../node_modules/regenerator-runtime/runtime.js';
 import * as model from './model.js';
 import { API, KEY } from './config.js';
-import _ from 'lodash';
+import '../../src/../node_modules/underscore';
 
 // import * as model from './model.j'
 
