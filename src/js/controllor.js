@@ -3,7 +3,7 @@ import '../../src/../node_modules/regenerator-runtime/runtime.js';
 import * as model from './model.js';
 import { API, KEY } from './config.js';
 // import '../../src/../node_modules/underscore';
-import '../../src/../node_modules/underscore';
+import 'underscore';
 
 // import * as model from './model.j'
 
