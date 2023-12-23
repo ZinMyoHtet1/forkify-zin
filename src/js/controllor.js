@@ -1,4 +1,4 @@
-import 'core.js';
+import 'core-js/es/array';
 import 'regenerator-runtime/runtime';
 import * as model from './model.js';
 import { API, KEY } from './config.js';
