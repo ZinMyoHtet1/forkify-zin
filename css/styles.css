@@ -31,6 +31,14 @@
   --font_weight_500: 500;
   --font_weight_600: 600;
   --font_weight_700: 700;
+  --font_size_extreme: 1.4rem;
+  --font_size_large: 1.2rem;
+  --font_size_medium: 1rem;
+  --font_size_small: 0.8rem;
+  --font_size_tiny: 0.6rem;
+  --font_size_recipe: 2.3rem;
+  --height: 50px;
+  --padding: 25px;
 }
 
 body {
@@ -68,11 +76,11 @@ body {
 .container .navbar {
   display: grid;
   grid-template-columns: minmax(100px, 250px) 1fr minmax(200px, 300px);
-  padding: 25px;
+  padding: var(--padding);
 }
 
 .navbar .nav_title img {
-  height: 50px;
+  height: var(--height);
   margin-left: 10px;
 }
 
@@ -83,9 +91,9 @@ body {
 }
 
 .navbar .searchbar input {
-  height: 50px;
+  height: var(--height);
   width: 60%;
-  border-radius: 50px;
+  border-radius: var(--height);
   border: none;
   outline: none;
   font-size: 1.2rem;
@@ -94,11 +102,11 @@ body {
 
 .navbar .searchbar button {
   width: 160px;
-  height: 50px;
+  height: var(--height);
   border: none;
-  border-radius: 50px;
+  border-radius: var(--height);
   background: linear-gradient(-45deg, var(--color_6), 50%, var(--color_7));
-  font-size: 1.2rem;
+  font-size: var(--font_size_large);
   /* padding: 0 20px; */
   font-weight: 500;
   color: var(--color_12);
@@ -120,8 +128,8 @@ body {
 }
 
 .navbar .button button {
-  height: 50px;
-  font-size: 1rem;
+  height: var(--height);
+  font-size: var(--font_size_medium);
   text-transform: uppercase;
   font-weight: 700;
   width: 50%;
@@ -219,7 +227,7 @@ aside ul {
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  font-size: 0.8rem;
+  font-size: var(--font_size_small);
   color: var(--color_6);
   margin-bottom: 40px;
 }
@@ -279,11 +287,11 @@ aside ul {
   text-transform: uppercase;
   letter-spacing: 0.05rem;
   color: gray;
-  font-size: 0.7rem;
+  font-size: var(--font_size_tiny);
 }
 
 .recipe_list ul li a .name_direction .name {
-  font-size: 1rem;
+  font-size: var(--font_size_medium);
   color: var(--color_6);
 }
 
@@ -330,7 +338,7 @@ body .overlay {
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 20px;
-  font-size: 1rem;
+  font-size: var(--font_size_medium);
   font-weight: 400;
 }
 
@@ -340,7 +348,7 @@ body .overlay {
 }
 
 .overlay .window form div h2 {
-  font-size: 1.2rem;
+  font-size: var(--font_size_large);
   font-weight: 600;
   color: var(--color_7);
 }
@@ -349,7 +357,7 @@ body .overlay {
   justify-self: center;
   align-self: center;
   padding: 10px 20px;
-  font-size: 1.3rem;
+  font-size: var(--font_size_large);
   font-weight: 500;
   background: linear-gradient(var(--color_7), var(--color_6));
   border: none;
@@ -381,7 +389,7 @@ body .overlay {
 
 .main .recipe .message {
   text-align: center;
-  font-size: 1.1rem;
+  font-size: var(--font_size_medium);
   color: var(--color_7);
   padding: 40px;
   letter-spacing: 0.1rem;
@@ -412,7 +420,7 @@ body .overlay {
   transform: skewY(-10deg);
   position: absolute;
   bottom: -30px;
-  font-size: 2.3rem;
+  font-size: var(--font_size_recipe);
   text-align: center;
   font-weight: 500;
 }
@@ -427,7 +435,7 @@ body .overlay {
   padding: 90px 0 50px;
   display: flex;
   align-items: center;
-  font-size: 1.3rem;
+  font-size: var(--font_size_large);
   font-weight: 400;
   text-transform: uppercase;
 }
@@ -529,7 +537,7 @@ body .overlay {
 
 .recipe #ingredient .ingredient_list .ing_item {
   list-style: none;
-  font-size: 0.9rem;
+  font-size: var(--font_size_small);
   /* line-height: 0.2rem; */
   padding: 15px 0;
 }
@@ -538,7 +546,7 @@ body .overlay {
 footer h2 {
   text-transform: uppercase;
   padding: 20px;
-  font-size: 1.3rem;
+  font-size: var(--font_size_large);
   font-weight: 600;
   /* line-height: 0.2rem; */
   color: var(--color_7);
@@ -580,7 +588,7 @@ footer a {
   border-radius: 25px;
   color: #fff;
   font-weight: 500;
-  font-size: 1rem;
+  font-size: var(--font_size_medium);
   text-transform: uppercase;
   /* margin-top: 20px; */
   margin-top: 40px;
@@ -592,4 +600,24 @@ footer p .publisher {
   color: #000;
   /* font-size: 2rem; */
   font-weight: 500;
+}
+
+@media (max-width: 1150px) {
+  body {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+}
+
+@media (max-width: 950px) {
+  :root {
+    --font_size_extreme: 1.3rem;
+    --font_size_large: 1.1rem;
+    --font_size_medium: 0.9rem;
+    --font_size_small: 0.7rem;
+    --font_size_tiny: 0.5rem;
+    --font_size_recipe: 2.2rem;
+    --height: 40px;
+    --padding: 10px;
+  }
 }
